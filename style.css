@@ -1,0 +1,992 @@
+/* =========================================================
+   🏛️ MUSEU DOS OBJETOS INÚTEIS
+   CSS OFICIAL DO PATRIMÔNIO MAIS DESNECESSÁRIO DO BRASIL
+
+   Este arquivo é responsável por:
+   - aparência
+   - organização
+   - animações
+   - responsividade
+   - fazer uma colher parecer patrimônio histórico
+
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   VARIÁVEIS
+   ========================================================= */
+
+:root {
+
+    --marrom-escuro: #2b241c;
+
+    --marrom: #5a3d20;
+
+    --marrom-claro: #8a653c;
+
+    --dourado: #b08a52;
+
+    --dourado-claro: #d2b47c;
+
+    --papel: #f5efe3;
+
+    --papel-claro: #fffaf0;
+
+    --fundo: #e8e1d2;
+
+    --texto: #2b241c;
+
+    --texto-suave: #665b4e;
+
+    --borda: #cbb38c;
+
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    background-color: var(--fundo);
+
+    color: var(--texto);
+
+    min-height: 100vh;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.cabecalho {
+
+    background-color: var(--marrom-escuro);
+
+    color: var(--papel);
+
+    text-align: center;
+
+    padding: 65px 20px 50px;
+
+    border-bottom:
+        8px solid var(--dourado);
+
+}
+
+
+.cabecalho-conteudo {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+}
+
+
+.subtitulo {
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 4px;
+
+    opacity: 0.65;
+
+    margin-bottom: 15px;
+
+}
+
+
+.cabecalho h1 {
+
+    font-size: 3.2rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+
+}
+
+
+.descricao-museu {
+
+    font-size: 1.15rem;
+
+    color: #d8cbb8;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   ÁREA PRINCIPAL
+   ========================================================= */
+
+main {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 70px 20px;
+
+}
+
+
+/* =========================================================
+   SALA
+   ========================================================= */
+
+.sala {
+
+    background-color: var(--papel);
+
+    border:
+        2px solid var(--borda);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15);
+
+    padding: 55px 40px;
+
+    position: relative;
+
+}
+
+
+/* Linha decorativa */
+
+.sala::before {
+
+    content: "";
+
+    display: block;
+
+    width: 100px;
+
+    height: 4px;
+
+    background-color: var(--dourado);
+
+    margin: 0 auto 35px;
+
+}
+
+
+/* =========================================================
+   CABEÇALHO DA SALA
+   ========================================================= */
+
+.cabecalho-sala {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+
+.numero-sala {
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    color: var(--dourado);
+
+    margin-bottom: 8px;
+
+}
+
+
+.cabecalho-sala h2 {
+
+    font-size: 2.5rem;
+
+    color: var(--marrom);
+
+    margin-bottom: 8px;
+
+}
+
+
+.titulo-sala {
+
+    color: var(--texto-suave);
+
+    font-style: italic;
+
+}
+
+
+/* =========================================================
+   OBJETO
+   ========================================================= */
+
+.objeto {
+
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    background-color: var(--papel-claro);
+
+    border:
+        1px solid var(--borda);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   ÁREA VISUAL
+   ========================================================= */
+
+.objeto-visual {
+
+    min-height: 320px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #f8f0df,
+            #eee2c9
+        );
+
+    border-bottom:
+        1px solid var(--borda);
+
+}
+
+
+/* =========================================================
+   OBJETO / EMOJI
+   ========================================================= */
+
+.objeto-emoji {
+
+    font-size: 9rem;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+
+}
+
+
+.objeto-emoji:hover {
+
+    transform:
+        rotate(12deg)
+        scale(1.1);
+
+    filter:
+        drop-shadow(
+            0 15px 10px rgba(0, 0, 0, 0.2)
+        );
+
+}
+
+
+.objeto-emoji:active {
+
+    transform:
+        rotate(-15deg)
+        scale(0.9);
+
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DO OBJETO
+   ========================================================= */
+
+.informacoes-objeto {
+
+    padding: 40px;
+
+    text-align: center;
+
+}
+
+
+.numero-catalogo {
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.7rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    color: var(--dourado);
+
+    margin-bottom: 10px;
+
+}
+
+
+.informacoes-objeto h3 {
+
+    font-size: 2.3rem;
+
+    color: var(--marrom);
+
+    margin-bottom: 20px;
+
+}
+
+
+.descricao-objeto {
+
+    max-width: 600px;
+
+    margin:
+        0 auto 12px;
+
+    color: var(--texto-suave);
+
+    font-size: 1.05rem;
+
+}
+
+
+/* =========================================================
+   PLACA DA OBRA
+   ========================================================= */
+
+.placa-obra {
+
+    max-width: 500px;
+
+    margin:
+        30px auto 0;
+
+    padding: 20px;
+
+    text-align: left;
+
+    border-top:
+        1px solid var(--borda);
+
+    border-bottom:
+        1px solid var(--borda);
+
+    font-size: 0.9rem;
+
+    color: var(--texto-suave);
+
+}
+
+
+.placa-obra p {
+
+    margin-bottom: 5px;
+
+}
+
+
+.placa-obra p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.placa-obra strong {
+
+    color: var(--marrom);
+
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO
+   ========================================================= */
+
+.navegacao {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 45px;
+
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+.botao-navegacao {
+
+    border:
+        2px solid var(--marrom);
+
+    background-color: transparent;
+
+    color: var(--marrom);
+
+    padding:
+        12px 22px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+
+}
+
+
+/* Hover */
+
+.botao-navegacao:hover:not(:disabled) {
+
+    background-color: var(--marrom);
+
+    color: var(--papel);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 15px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* Clique */
+
+.botao-navegacao:active:not(:disabled) {
+
+    transform:
+        translateY(0);
+
+    box-shadow: none;
+
+}
+
+
+/* =========================================================
+   BOTÃO DESATIVADO
+   ========================================================= */
+
+/*
+   Quando chegamos na primeira ou última sala,
+   o JavaScript desativa o botão.
+
+   Aqui explicamos visualmente:
+   "não tem pra onde ir, cidadão."
+*/
+
+.botao-navegacao:disabled {
+
+    opacity: 0.35;
+
+    cursor: not-allowed;
+
+    border-color:
+        var(--texto-suave);
+
+}
+
+
+/* =========================================================
+   CONTADOR
+   ========================================================= */
+
+.contador-sala {
+
+    min-width: 120px;
+
+    text-align: center;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: var(--texto-suave);
+
+}
+
+
+/* =========================================================
+   ANIMAÇÃO DE ENTRADA DA SALA
+   ========================================================= */
+
+.sala {
+
+    animation:
+        aparecerSala 0.8s ease;
+
+}
+
+
+@keyframes aparecerSala {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   ANIMAÇÃO DE TROCA DE EXPOSIÇÃO
+   ========================================================= */
+
+/*
+   O objeto entra pela direita.
+
+   Porque aparentemente uma pedra precisa
+   de uma entrada triunfal.
+*/
+
+.objeto.trocando {
+
+    animation:
+        trocarObjeto 0.45s ease;
+
+}
+
+
+@keyframes trocarObjeto {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateX(35px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   PEQUENO EFEITO NA PLACA
+   ========================================================= */
+
+.placa-obra {
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.placa-obra:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.05);
+
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.rodape {
+
+    background-color:
+        var(--marrom-escuro);
+
+    color:
+        #d8cbb8;
+
+    text-align: center;
+
+    padding:
+        35px 20px;
+
+    font-size:
+        0.9rem;
+
+}
+
+
+.rodape p {
+
+    margin-bottom:
+        6px;
+
+}
+
+
+.rodape p:last-child {
+
+    margin-bottom:
+        0;
+
+}
+
+
+.aviso-rodape {
+
+    opacity:
+        0.55;
+
+    font-size:
+        0.8rem;
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/*
+   Porque alguém inevitavelmente vai abrir
+   esse museu no celular durante uma aula.
+*/
+
+@media (max-width: 700px) {
+
+
+    /* Cabeçalho */
+
+    .cabecalho {
+
+        padding:
+            45px 20px 35px;
+
+    }
+
+
+    .cabecalho h1 {
+
+        font-size:
+            2.2rem;
+
+    }
+
+
+    .descricao-museu {
+
+        font-size:
+            1rem;
+
+    }
+
+
+    /* Área principal */
+
+    main {
+
+        padding:
+            30px 12px;
+
+    }
+
+
+    /* Sala */
+
+    .sala {
+
+        padding:
+            40px 20px;
+
+    }
+
+
+    /* Título */
+
+    .cabecalho-sala h2 {
+
+        font-size:
+            2rem;
+
+    }
+
+
+    /* Área do objeto */
+
+    .objeto-visual {
+
+        min-height:
+            250px;
+
+    }
+
+
+    /* Emoji */
+
+    .objeto-emoji {
+
+        font-size:
+            6rem;
+
+    }
+
+
+    /* Informações */
+
+    .informacoes-objeto {
+
+        padding:
+            30px 20px;
+
+    }
+
+
+    .informacoes-objeto h3 {
+
+        font-size:
+            1.9rem;
+
+    }
+
+
+    /* Navegação */
+
+    .navegacao {
+
+        gap:
+            10px;
+
+    }
+
+
+    .botao-navegacao {
+
+        padding:
+            10px 14px;
+
+        font-size:
+            0.9rem;
+
+    }
+
+
+    .contador-sala {
+
+        min-width:
+            auto;
+
+        font-size:
+            0.7rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   TELAS MUITO PEQUENAS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+
+    .cabecalho h1 {
+
+        font-size:
+            1.8rem;
+
+    }
+
+
+    .subtitulo {
+
+        letter-spacing:
+            2px;
+
+    }
+
+
+    .sala {
+
+        padding:
+            30px 15px;
+
+    }
+
+
+    .objeto-emoji {
+
+        font-size:
+            5rem;
+
+    }
+
+
+    .navegacao {
+
+        flex-wrap:
+            wrap;
+
+    }
+
+
+    .contador-sala {
+
+        order:
+            -1;
+
+        width:
+            100%;
+
+        margin-bottom:
+            10px;
+
+    }
+
+}
+/* =========================================================
+   MENSAGEM DE INTERAÇÃO DO OBJETO
+   ========================================================= */
+
+/*
+   Área onde o museu responde ao visitante.
+
+   Porque aparentemente uma colher
+   precisa conversar com as pessoas.
+*/
+
+.mensagem-objeto {
+
+    margin-top: 30px;
+
+    padding: 15px 20px;
+
+    border-left: 4px solid var(--dourado);
+
+    background-color: #f1e7d3;
+
+    color: var(--texto-suave);
+
+    font-style: italic;
+
+    text-align: left;
+
+    opacity: 0.85;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+/*
+   Quando a mensagem aparece,
+   ela dá uma pequena levantada.
+
+   O drama é importante.
+*/
+
+.mensagem-objeto.mostrar {
+
+    opacity: 1;
+
+    transform:
+        translateY(-3px);
+
+}
+

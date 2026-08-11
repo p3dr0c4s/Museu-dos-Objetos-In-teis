@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!--
+        Faz o museu funcionar em computadores,
+        tablets e celulares.
+
+        Porque até o patrimônio inútil precisa
+        ser responsivo.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Museu dos Objetos Inúteis</title>
+
+    <!-- Arquivo responsável pela aparência -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         CABEÇALHO DO MUSEU
+         ===================================================== -->
+
+    <header class="cabecalho">
+
+        <div class="cabecalho-conteudo">
+
+            <p class="subtitulo">
+                INSTITUIÇÃO CULTURAL DE IMPORTÂNCIA DUVIDOSA
+            </p>
+
+            <h1>
+                🏛️ Museu dos Objetos Inúteis
+            </h1>
+
+            <p class="descricao-museu">
+                Um acervo cuidadosamente preservado de coisas
+                que ninguém precisava preservar.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+        <section id="museu" class="sala">
+
+
+            <!-- =================================================
+                 CABEÇALHO DA SALA
+                 ================================================= -->
+
+            <div class="cabecalho-sala">
+
+                <p class="numero-sala">
+                    EXPOSIÇÃO PERMANENTE
+                </p>
+
+                <h2>
+                    Sala 01
+                </h2>
+
+                <p class="titulo-sala">
+                    Objetos que simplesmente existem
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 OBJETO EXPOSTO
+                 ================================================= -->
+
+            <article class="objeto">
+
+
+                <!-- =============================================
+                     ÁREA VISUAL
+                     ============================================= -->
+
+                <div class="objeto-visual">
+
+                    <div
+                        class="objeto-emoji"
+                        id="objeto-emoji"
+                        title="Não toque na obra."
+                    >
+                        🥄
+                    </div>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     INFORMAÇÕES DA OBRA
+                     ============================================= -->
+
+                <div class="informacoes-objeto">
+
+
+                    <!-- Número do catálogo -->
+
+                    <p class="numero-catalogo">
+                        CAT. Nº 0001
+                    </p>
+
+
+                    <!-- Nome da obra -->
+
+                    <h3>
+                        A Colher
+                    </h3>
+
+
+                    <!-- Descrição -->
+
+                    <p class="descricao-objeto">
+                        Uma colher absolutamente normal.
+                        Ela não faz nada especial.
+                        Ela não possui poderes.
+                        Ela não muda sua vida.
+                    </p>
+
+                    <p class="descricao-objeto">
+                        E mesmo assim alguém decidiu colocá-la
+                        dentro de uma vitrine.
+                    </p>
+
+
+
+                    <!-- =========================================
+                         PLACA DA OBRA
+                         ========================================= -->
+
+                    <div class="placa-obra">
+
+                        <p>
+                            <strong>Material:</strong>
+                            Metal misterioso
+                        </p>
+
+                        <p>
+                            <strong>Período:</strong>
+                            Provavelmente ontem
+                        </p>
+
+                        <p>
+                            <strong>Valor estimado:</strong>
+                            R$ 0,37
+                        </p>
+
+                        <p>
+                            <strong>Importância histórica:</strong>
+                            Questionável
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         ÁREA DE INTERAÇÃO
+                         ========================================= -->
+
+                    <div
+                        id="mensagem-objeto"
+                        class="mensagem-objeto"
+                    >
+                        Clique no objeto para interagir.
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 NAVEGAÇÃO ENTRE SALAS
+                 ================================================= -->
+
+            <div class="navegacao">
+
+
+                <!-- Voltar -->
+
+                <button
+                    id="btn-voltar"
+                    class="botao-navegacao"
+                    type="button"
+                >
+                    ⬅️ Voltar
+                </button>
+
+
+
+                <!-- Contador -->
+
+                <div
+                    id="contador-sala"
+                    class="contador-sala"
+                >
+                    Sala 01 / 05
+                </div>
+
+
+
+                <!-- Avançar -->
+
+                <button
+                    id="btn-avancar"
+                    class="botao-navegacao"
+                    type="button"
+                >
+                    Avançar ➡️
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         RODAPÉ
+         ===================================================== -->
+
+    <footer class="rodape">
+
+        <p>
+            🏛️ Museu dos Objetos Inúteis © 2026
+        </p>
+
+        <p>
+            Nenhum objeto útil foi utilizado na construção
+            deste museu.
+        </p>
+
+        <p class="aviso-rodape">
+            A direção não se responsabiliza por visitantes
+            que desenvolvam apego emocional às obras.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
